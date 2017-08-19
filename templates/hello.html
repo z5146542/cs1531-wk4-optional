@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+   <head>
+   <title>Hello page</title>
+   </head>
+   <body>
+       {% if all_users %}
+       {% for user in all_users %}
+       <!-- The hyperlink below directs to a user-independent page but uses the template of user.html -->
+       <!-- user[0],user[1],user[2] is returned back to routes.py for reference-->
+      <h1> Hi, <a href="/Hello/{{user[0]}}/{{user[1]}}/{{user[2]}}">{{ user[0] }}</a> </h1>
+      {% endfor %}
+      {%else%}
+      No students to show
+      {% endif %}
+   </body>
+</html>
