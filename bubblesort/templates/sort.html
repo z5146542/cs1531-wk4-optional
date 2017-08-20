@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+   <head>
+   <title>Hello page</title>
+   </head>
+   <body>
+   	<p><b>Sorting process</b></p>
+   	<p></p>
+   	<p><b>All iterations of bubble sort</b></p>
+	{% if sorted_seq %}
+	{% for order in sorted_seq %}
+		<p style="color:blue">{{order}}</p>
+	{% endfor %}
+	{%else%}
+	Nothing to show
+	{% endif %}
+   </body>
+</html>
+
